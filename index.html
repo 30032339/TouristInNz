@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Home</title>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/animation.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="/js/parallax.min.js"></script>
+    </head>
+    <body>
+        <header class="zoom">
+            <img src="./img/f111.png" id="layer1" alt="mon1">
+            <img src="./img/f2222.png" id="layer2" alt="mon2">
+            <img src="./img/text.png" id="text" alt="fonts">
+        </header>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas  fa-bars"></i>
+            </label>
+            <label  class="logo">NEW ZEALAND</label>
+            <ul>
+                <li><a class="active" href="index.html">HOME</a></li>
+                <li><a href="about.html">PLACES</a></li>
+                <li><a href="csv-button.html">DATA</a></li>
+                <li><a href="video.html">VIDEOS</a></li>
+                <li><a href="image.html">GALLERY</a></li>
+                <li><a href="thinktodo.html">THINKS TO DO</a></li>
+                <li><a href="reference.html">REFERENCE</a></li>
+            </ul>
+        </nav>
+        <section>
+            <div class="parallax-window" data-parallax="scroll" data-image-src="https://cdn.wallpapersafari.com/95/60/QJwsb3.jpg">
+            </div>
+        </section>
+        <section class="bg" >
+            <div class=" hed"><h2>ABOUT NEWZEALAND</h2><P class="tit">Click below image for more details</P><br><br></div>
+                <div class="containerl">  
+                    <div class="card">
+                        <div class="imgBox">
+                            <img src="./img/mape.jpg" alt="1st">
+                        </div>
+                        <div class="details">
+                            <h2>Intoduction</h2><br>
+                            <p>New Zealand is part of Oceania and is located in the southwest Pacific Ocean. It is also known as “the land of the long white cloud" or "Aotearoa" in Maori.
+                            It consists of two main islands(North Island,South Island) and Stewart Island.  It offers a very diverse landscape for travellers and has a rich and varied wildlife. The total area of New Zealand is 268,680 km ².The capital city of the country is Wellington.A small island nation home to around 4.5 million people located in the Pacific Ocean, New Zealand is famous for its national rugby team, its indigenous Maori culture and its picturesque landscape.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="imgBox">
+                            <img src="https://i.pinimg.com/736x/20/15/1f/20151f33c98a8836020ad18e08e8cd38.jpg"  alt="2nd">
+                        </div>
+                        <div class="details">
+                            <h2>Wellington</h2><br>
+                            <p>Wellington was originally named Te Whanganui a Tara, meaning "great harbour of Tara". European settlers arrived in the early 1840s, originally settling in Petone on the northern end of the harbour. ... In 1865, Wellington became the capital of New Zealand and has been the centre of New Zealand government since then.Wellington is located at the Southwestern tip of the North Island, which gives you the opportunity to easily pay the South Island a visit. ... The South Island is one of the most naturally beautiful destinations on earth, and is definitely worth a visit!!.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="imgBox">
+                            <img src="https://www.datocms-assets.com/6737/1535266504-lakewanakatnz.jpg?auto=compress%2Cformat&crop=faces&dpr=0.94&fit=crop&fm=jpg&w=1920" alt="3rd" >
+                        </div>
+                        <div class="details">
+                            <h2>weather</h2><br>
+                            <p>New Zealand weather and climate is of paramount importance to the people of New Zealand, as many New Zealanders make their living from the land. New Zealand has mild temperatures, moderately high rainfall, and many hours of sunshine throughout most of the country. New Zealand's climate is dominated by two main geographical features: the mountains and the sea.While the far north has subtropical weather during summer, and inland alpine areas of the South Island can be as cold as -10 C in winter, most of the country lies close to the coast, which means mild temperatures, moderate rainfall, and abundant sunshine.</p>
+                        </div>
+                    </div>
+                </div>
+            <footer class="fhome">
+                    <h3>@copyright , Created By Patel Rishi(30032339)</h3>
+            </footer>
+         </section>
+    <script>
+        var layer1 = document.getElementById('layer1')
+        scroll = window.pageYOffset;
+        document.addEventListener('scroll',function (e) {var offset = window.pageYOffset;
+        scroll= offset;
+        layer1.style.width = (100 + scroll) +
+        '%';
+        })
+
+        var layer2 = document.getElementById('layer2')
+        scroll = window.pageYOffset;
+        document.addEventListener('scroll',function (e) {var offset = window.pageYOffset;
+        scroll= offset;
+        layer2.style.width = (100 + scroll) +
+        '%';
+        layer2.style.left = scroll/50 +
+        '%';
+        })
+
+        
+        var text = document.getElementById('text')
+        scroll = window.pageYOffset;
+        document.addEventListener('scroll',function (e) {var offset = window.pageYOffset;
+        scroll= offset;
+        layer2.style.width = (100 + scroll) +
+        '%';
+        text.style.top = - scroll/7 +
+        '%';
+        })
+    </script>
+</body>
+</html>

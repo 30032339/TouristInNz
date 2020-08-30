@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IMAGE GALLERY</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/animation.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="/js/parallax.min.js"></script>
+	<link rel="shortcut icon" href="../favicon.ico">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<script src="/js/modernizr.custom.46884.js"></script>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas  fa-bars"></i>
+
+        </label>
+        <label  class="logo">
+            NEW ZEALAND</label>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">PLACES</a></li>
+            <li><a href="csv-button.html">DATA</a></li>
+            <li><a  href="video.html">VIDEOS</a></li>
+            <li><a  class="active"  href="image.html">GALLERY</a></li>
+            <li><a href="thinktodo.html">THINKS TO DO</a></li>
+            <li><a href="reference.html">REFERENCE</a></li>
+        </ul>
+    </nav>
+    <section>
+            <div class="parallax-window" data-parallax="scroll" data-image-src="https://c.wallhere.com/photos/b9/4d/relaxing-73959.jpg!d">
+            </div>
+    </section>
+
+    <div class="imagecontainer">
+
+			<div class="imagefc">
+                <h1 class="animated imagehd">IMAGE GALLERY</h1>
+			</div>
+
+			<div class="wrapper">
+
+				<ul id="sb-slider" class="sb-slider">
+					<li>
+						<a><img src="/img/11.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3>Piha Beach,North Island</h3>
+						</div>
+					</li>
+					<li>
+						<a><img src="/img/22.jpg" alt="image2"/></a>
+						<div class="sb-description">
+							<h3>Aoraki/Mt cook Nation Park, South Island</h3>
+						</div>
+					</li>
+					<li>
+						<a><img src="/img/33.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3>Cape Reinga , North Edge of New Zealand</h3>
+						</div>
+					</li>
+					<li>
+						<a><img src="/img/44.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3>Lake Tekapo , New Zealand</h3>
+						</div>
+					</li>
+					<li>
+						<a><img src="/img/55.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3>Milford Sound , South Island</h3>
+						</div>
+					</li>
+					<li>
+						<a><img src="/img/66.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3>Coromandel Peninsula</h3>
+						</div>
+					</li>
+					<li>
+						<a><img src="/img/77.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3>Mount Taranaki Volcano</h3>
+						</div>
+					</li>
+					
+					<li>
+						<a><img src="/img/88.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3>Wanala Lake</h3>
+						</div>
+					</li>
+					<li>
+						<a><img src="/img/99.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3>Lake Rotoiti</h3>
+						</div>
+					</li>
+					<li>
+						<a><img src="/img/10.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3>Moeraki Boulders, South Island</h3>
+						</div>
+					</li>
+				</ul>
+
+				<div id="shadow" class="shadow"></div>
+
+				<div id="nav-arrows" class="nav-arrows">
+					<a href="#">Next</a>
+					<a href="#">Previous</a>
+				</div>
+		</div>
+		</div>
+    <footer class="fcopy">
+            <h3>@copyright , created by Patel Rishi</h3>
+		  </footer>
+		  
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="/js/jquery.slicebox.js"></script>
+<script>
+	$(function() {
+		
+		var Page = (function() {
+
+			var $navArrows = $( '#nav-arrows' ).hide(),
+				$shadow = $( '#shadow' ).hide(),
+				slicebox = $( '#sb-slider' ).slicebox( {
+					onReady : function() {
+
+						$navArrows.show();
+						$shadow.show();
+
+					},
+					orientation : 'r',
+					cuboidsRandom : true,
+					disperseFactor : 30
+				} ),
+				
+				init = function() {
+
+					initEvents();
+					
+				},
+				initEvents = function() {
+
+					// add navigation events
+					$navArrows.children( ':first' ).on( 'click', function() {
+
+						slicebox.next();
+						return false;
+
+					} );
+
+					$navArrows.children( ':last' ).on( 'click', function() {
+						
+						slicebox.previous();
+						return false;
+
+					} );
+
+				};
+
+				return { init : init };
+
+		})();
+
+		Page.init();
+
+	});
+</script>
+</body>
+</html>

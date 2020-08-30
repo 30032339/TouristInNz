@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PLACES</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" />
+    <link rel="stylesheet" href="css/animation.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+  </head>
+  <body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas  fa-bars"></i>
+
+        </label>
+        <label  class="logo">
+            NEW ZEALAND</label>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a  class="active" href="about.html">PLACES</a></li>
+            <li><a href="csv-button.html">DATA</a></li>
+            <li><a   href="video.html">VIDEOS</a></li>
+            <li><a href="image.html">GALLERY</a></li>
+            <li><a href="thinktodo.html">THINKS TO DO</a></li>
+            <li><a href="reference.html">REFERENCE</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div class="parallax-window" data-parallax="scroll" data-image-src="https://cn.pling.com/img/3/1/9/7/49e4790e43e3cb6b3326fa8f7922abbafbae.jpg">
+        </div>
+    </section>
+      <div class="heading">
+        <h2 class="animated fadeInLeft">MOST FAMOUS PLACES IN NEWZEALAND</h2>
+      </div>
+    <section class="swiper-container loading ">
+          <div class="swiper-wrapper">      
+              <div class="swiper-slide slide1">
+                <div class="content">
+                  <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7">Queenstown</p>
+                  <span class="caption" data-swiper-parallax="-20%">Queenstown is nestled on the shores of Lake Wakatipu, the longest and third largest lake in New Zealand. It is surrounded by majestic mountains and offers beautiful beaches and crystal clear waters.</span>
+                </div>
+              </div>
+      
+              <div class="swiper-slide slide2">
+                <div class="content">
+                  <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7"> Milford Sound</p>
+                  <span class="caption" data-swiper-parallax="-20%">Deep within Fiordland National Park lies Milford Sound, New Zealand’s most stunning natural attraction. With its magical combination of mountain peaks, ink-dark waters and superb dramatic forest-clad cliffs, it must be seen to be believed.</span>
+                </div>
+              </div>
+      
+              <div class="swiper-slide slide3">
+               
+                <div class="content">
+                  <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7">Bay of Islands</p>
+                  <span class="caption" data-swiper-parallax="-20%">A three-hour drive north of Auckland, the beautiful Bay of Islands is one of the most popular vacation destinations in the country. More than 144 islands dot the glittering bay, making it a haven for sailing and yachting.</span>
+                </div>
+              </div>
+            
+              <div class="swiper-slide slide4">
+                <div class="content">
+                  <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7">Lake Taupo</p>
+                  <span class="caption" data-swiper-parallax="-20%">In the center of the North Island and just a few kilometers from glittering Lake Taupo, New Zealand's largest lake, lies Tongariro National Park. A dual World Heritage Site due to its spectacular volcanic features and its importance to the Maori culture.</span>
+                </div>
+              </div>
+      
+              <div class="swiper-slide slide5">
+                <div class="content">
+                  <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7">Rotorua</p>
+                  <span class="caption" data-swiper-parallax="-20%">On the tumultuous Pacific Ring of Fire, Rotorua is one of the most active geothermal regions in the world. This is a land where the earth speaks. Boiling mud pools, hissing geysers, volcanic craters, and steaming thermal springs betray the forces that birthed much of New Zealand's dramatic topography.</span>
+                </div>
+              </div>
+              <div class="swiper-slide slide6">
+                <div class="content">
+                  <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7">Kaikoura</p>
+                  <span class="caption" data-swiper-parallax="-20%">Birders, wildlife enthusiasts, and seafood aficionados will love the charming coastal village of Kaikoura. Tucked between the Seaward Kaikoura Range and the Pacific Ocean, Kaikoura offers excellent coastal hikes and popular whale watching tours. </span>
+                </div>
+              </div>
+
+
+            </div>
+          </section> 
+    <footer class="fcopy">
+            <h3>@copyright , Created By Patel Rishi(30032339)</h3>
+          </footer>
+          
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js"></script>
+<script>
+  let sliderSelector = '.swiper-container',
+      options = {
+        loop: true,
+        speed:800,
+        slidesPerView: 2, // or 'auto'
+        spaceBetween: 20,
+        centeredSlides : true,
+        effect: 'coverflow', // 'cube', 'fade', 'coverflow',
+        coverflowEffect: {
+          rotate: 50, // Slide rotate in degrees
+          stretch: 0, // Stretch space between slides (in px)
+          depth: 50, // Depth offset in px (slides translate in Z axis)
+          modifier: 1, // Effect multipler
+          slideShadows : true // Enables slides shadows
+        },
+        grabCursor: true,
+        parallax: true,
+        on: {
+          imagesReady: function(){
+            this.el.classList.remove('loading');
+          }
+        }
+      };
+  let mySwiper = new Swiper(sliderSelector, options);
+  mySwiper.init();
+</script>
+</body>
+
+</html>

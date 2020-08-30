@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><title>DATA</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/css/style.css"> 
+    </head>
+<body>
+        <nav>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fas  fa-bars"></i>
+        
+                </label>
+                <label  class="logo">
+                    NEW ZEALAND</label>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">PLACES</a></li>
+                    <li><a  class="active" href="csv-button.html">DATA</a></li>
+                    <li><a href="video.html">VIDEOS</a></li>
+                    <li><a href="image.html">GALLERY</a></li>
+                    <li><a href="thinktodo.html">THINKS TO DO</a></li>
+                    <li><a href="reference.html">REFERENCE</a></li>
+                </ul>
+        </nav>
+            <br><br><br>
+    <div class="datatext">
+        <h3>
+            This page contains an embedded java script.<br>
+            The script opens an external csv formatted file.<br>
+            The ability to open an external file enables us to read data supplied by external programs<br>
+            We could read the current weather conditions or the contents of a servers log files<br><br>
+            The external file is read by the script and turned into an HTML Table, with visible borders.<br><br>
+            To run the script click on the activator below<br>
+        </h3><br>
+    </div>
+
+        <p class="databutton_container"><button class="databtn" type="button" onclick="mytable()">RUN_CSV_IMPORT_SCRIPT</button></p>
+
+    <script src="/js/d3.v3.min.js"></script> 
+
+    <script> 
+        function mytable() {
+            d3.text("/csv/data.csv", function(data) {
+                var parsedCSV = d3.csv.parseRows(data);
+                var container = d3.select("body")
+                    .append("table")
+                    .selectAll("tr")
+                        .data(parsedCSV).enter()
+                       .append("tr")
+                    .selectAll("td")
+                        .data(function(d) { return d; }).enter()
+                        .append("td")
+                        .text(function(d) { return d; });
+            });
+	}
+    </script>
+</body>
+</html> 
